@@ -1,0 +1,20 @@
+{
+  "name": "simple-pubsub",
+  "version": "1.0.0",
+  "description": "Instructions 1. Build the Publish-Subscribe mechanism. Allow ISubscriber objects to register against an concrete IPublishSubscribeService object for an event type. Implement the publish method so that when a publish event occurs, all subscribers of that the event type published will have a chance to handle the event. The subscribers should be working off a shared array of Machine objects, mutating them depending on the event received. 2. Now add the method 'unsubscribe' on IPublishSubscribeService to allow handlers to unsubscribe from events. You may change the existing method signatures. 3. Implement MachineRefillSubscriber. It will increase the stock quantity of the machine. 4. Let's add some new behaviour. If a machine stock levels drops below 3 a new Event, LowStockWarningEvent should be generated. When the stock levels hits 3 or above (because of a MachineRefillEvent), a StockLevelOkEvent should be generated.  For each machine, LowStockWarningEvent or StockLevelOkEvent should only fire one time when crossing the threshold of 3. You may want to introduce new subscribers (e.g. a new subscriber called StockWarningSubscriber). In fact you may change anything as long as the task is performed and you can justify your reasonings. Remember subscribers should be notified in the order that the events occured.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.7.4",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}
